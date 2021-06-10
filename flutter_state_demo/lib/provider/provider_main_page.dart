@@ -6,7 +6,7 @@ class ProviderMainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textArr = ['Provider', 'flutter_bloc', 'fish_redux'];
+    final textArr = ['Provider', 'ChangeNotifierProvider', 'fish_redux'];
     return Scaffold(
       appBar: AppBar(
         title: Text('Provider'),

@@ -1,6 +1,6 @@
-class CountModel {
+class CountModelProvider {
   int count;
-  CountModel({this.count = 1});
+  CountModelProvider({this.count = 1});
 
   Future<void> increment() async {
     count++;

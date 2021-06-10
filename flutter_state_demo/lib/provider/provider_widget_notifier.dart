@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_demo/models/count_model_provider.dart';
+import 'package:flutter_state_demo/models/count_model_notifier.dart';
 import 'package:provider/provider.dart';
 
-class ProviderWidgetProvider extends StatelessWidget {
-  const ProviderWidgetProvider({Key key}) : super(key: key);
+class ProviderWidgetNotifier extends StatelessWidget {
+  const ProviderWidgetNotifier({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('ProviderWidget')),
-      body: Provider(
-        create: (_) => CountModelProvider(),
+      appBar: AppBar(title: Text('ChangeNotifierProvider')),
+      body: ChangeNotifierProvider(
+        create: (_) => CountModelNotifier(),
         child: Column(
           children: [
             Builder(builder: (context) {
-              CountModelProvider _model =
-                  Provider.of<CountModelProvider>(context);
+              CountModelNotifier _model =
+                  Provider.of<CountModelNotifier>(context);
               return Container(
                   margin: const EdgeInsets.only(top: 20),
                   width: MediaQuery.of(context).size.width,
@@ -24,7 +24,7 @@ class ProviderWidgetProvider extends StatelessWidget {
                   color: Colors.lightBlueAccent,
                   child: Text('当前是：${_model.count}'));
             }),
-            Consumer<CountModelProvider>(builder: (context, model, child) {
+            Consumer<CountModelNotifier>(builder: (context, model, child) {
               return Container(
                 margin: const EdgeInsets.only(top: 20),
                 width: MediaQuery.of(context).size.width,
@@ -36,7 +36,7 @@ class ProviderWidgetProvider extends StatelessWidget {
                 ),
               );
             }),
-            Consumer<CountModelProvider>(builder: (context, model, child) {
+            Consumer<CountModelNotifier>(builder: (context, model, child) {
               return FlatButton(
                   color: Colors.tealAccent,
                   onPressed: model.increment,
