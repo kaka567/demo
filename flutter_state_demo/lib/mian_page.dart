@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_state_demo/widgets/cell_widget.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key key}) : super(key: key);
@@ -13,21 +14,10 @@ class MainPage extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, textArr[index]);
-            },
-            child: Container(
-              height: 50,
-              alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(textArr[index]),
-                  Icon(Icons.arrow_right_rounded)
-                ],
-              ),
-            ),
-          );
+              onTap: () {
+                Navigator.pushNamed(context, textArr[index]);
+              },
+              child: CellWidget(textArr[index]));
         },
         separatorBuilder: (context, index) {
           return Divider(
