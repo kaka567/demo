@@ -1,5 +1,8 @@
 main(List<String> args) {
   final dog = Dog();
+  print('Name is : ${dog.name}');
+  dog.name = 'Dog';
+  print('Name is : ${dog.name}');
   dog.Eat();
   dog.Say();
   final cat = Cat();
