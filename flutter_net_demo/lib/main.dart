@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_net_demo/kk_net/core/kk_net.dart';
+import 'package:flutter_net_demo/kk_net/request/test_request.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,10 @@ class MyHomePage extends StatelessWidget {
         color: Colors.red,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('点击事件');
+        onPressed: () async {
+          final request = TestRequest();
+          final result = await KKNet.getInstance().fire(request);
+          print('请求结果：$result');
         },
         child: Icon(Icons.add),
       ),

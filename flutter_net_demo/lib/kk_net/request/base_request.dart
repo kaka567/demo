@@ -4,7 +4,7 @@ abstract class BaseRequest {
   // 是否使用https
   bool useHttps = true;
   // path参数
-  String? pathParams;
+  String pathParams;
   // query参数
   Map<String, dynamic> params = Map();
   // header
