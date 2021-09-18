@@ -62,11 +62,34 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_boost:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "v3.0-preview.11"
+      resolved-ref: "9b477e14924abce483301804988e6d06d1d5f32c"
+      url: "https://github.com/alibaba/flutter_boost.git"
+    source: git
+    version: "3.0.0"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   matcher:
     dependency: transitive
     description:
