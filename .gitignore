@@ -181,3 +181,4 @@ Pods/
 *.xcworkspacedata
 .idea/
 .vscode/
+*.lock
