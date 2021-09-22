@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_boost/boost_navigator.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
 class PageA extends StatelessWidget {
@@ -8,8 +10,14 @@ class PageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Page A'),
+      appBar: CupertinoNavigationBar(
+        middle: const Text('Flutter Page A'),
+        leading: CupertinoNavigationBarBackButton(
+          color: Colors.black,
+          onPressed: () {
+            BoostNavigator.instance.pop();
+          },
+        ),
       ),
       body: Center(
           child: InkWell(
@@ -20,7 +28,7 @@ class PageA extends StatelessWidget {
           child: const Text('点击跳转 Flutter Page B'),
           color: Colors.blue,
           height: 50,
-          // alignment: Alignment.center,
+          alignment: Alignment.center,
         ),
       )),
     );
