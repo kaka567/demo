@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D62BDA226FAEB6100F1A1A2 /* BoostDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62BDA126FAEB6100F1A1A2 /* BoostDelegate.swift */; };
+		3D62BDA826FAF48F00F1A1A2 /* BaseFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D62BDA726FAF48F00F1A1A2 /* BaseFlutterViewController.swift */; };
 		3DC9189626F5D00000C9D79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9189526F5D00000C9D79A /* AppDelegate.swift */; };
-		3DC9189826F5D00000C9D79A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9189726F5D00000C9D79A /* SceneDelegate.swift */; };
 		3DC9189A26F5D00000C9D79A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC9189926F5D00000C9D79A /* ViewController.swift */; };
 		3DC9189D26F5D00000C9D79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC9189B26F5D00000C9D79A /* Main.storyboard */; };
 		3DC9189F26F5D00100C9D79A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC9189E26F5D00100C9D79A /* Assets.xcassets */; };
@@ -17,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D62BDA126FAEB6100F1A1A2 /* BoostDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDelegate.swift; sourceTree = "<group>"; };
+		3D62BDA326FAEBC000F1A1A2 /* flutter_boost_ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flutter_boost_ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		3D62BDA726FAF48F00F1A1A2 /* BaseFlutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFlutterViewController.swift; sourceTree = "<group>"; };
 		3DC9189226F5D00000C9D79A /* flutter_boost_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flutter_boost_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC9189526F5D00000C9D79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DC9189726F5D00000C9D79A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3DC9189926F5D00000C9D79A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DC9189C26F5D00000C9D79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DC9189E26F5D00100C9D79A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,12 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				3DC9189526F5D00000C9D79A /* AppDelegate.swift */,
-				3DC9189726F5D00000C9D79A /* SceneDelegate.swift */,
+				3D62BDA126FAEB6100F1A1A2 /* BoostDelegate.swift */,
 				3DC9189926F5D00000C9D79A /* ViewController.swift */,
+				3D62BDA726FAF48F00F1A1A2 /* BaseFlutterViewController.swift */,
 				3DC9189B26F5D00000C9D79A /* Main.storyboard */,
 				3DC9189E26F5D00100C9D79A /* Assets.xcassets */,
 				3DC918A026F5D00100C9D79A /* LaunchScreen.storyboard */,
 				3DC918A326F5D00100C9D79A /* Info.plist */,
+				3D62BDA326FAEBC000F1A1A2 /* flutter_boost_ios-Bridging-Header.h */,
 			);
 			path = flutter_boost_ios;
 			sourceTree = "<group>";
@@ -80,7 +85,6 @@
 				F5CFC7BF4FC5CC4A387A85A0 /* Pods-flutter_boost_ios.debug.xcconfig */,
 				B4270B1DCE612173571BD12A /* Pods-flutter_boost_ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,9 +104,11 @@
 			buildConfigurationList = 3DC918A626F5D00100C9D79A /* Build configuration list for PBXNativeTarget "flutter_boost_ios" */;
 			buildPhases = (
 				7890A68B3307E00D40016768 /* [CP] Check Pods Manifest.lock */,
+				E5AA49531AC6FEEEE8A277EE /* [CP-User] Run Flutter Build flutter_boost_dart Script */,
 				3DC9188E26F5D00000C9D79A /* Sources */,
 				3DC9188F26F5D00000C9D79A /* Frameworks */,
 				3DC9189026F5D00000C9D79A /* Resources */,
+				A9664E670FE9FEB2EC7645FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +130,7 @@
 				TargetAttributes = {
 					3DC9189126F5D00000C9D79A = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -181,6 +188,33 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A9664E670FE9FEB2EC7645FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flutter_boost_ios/Pods-flutter_boost_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flutter_boost_ios/Pods-flutter_boost_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flutter_boost_ios/Pods-flutter_boost_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AA49531AC6FEEEE8A277EE /* [CP-User] Run Flutter Build flutter_boost_dart Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_boost_dart Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_boost_dart/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,9 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D62BDA226FAEB6100F1A1A2 /* BoostDelegate.swift in Sources */,
 				3DC9189A26F5D00000C9D79A /* ViewController.swift in Sources */,
 				3DC9189626F5D00000C9D79A /* AppDelegate.swift in Sources */,
-				3DC9189826F5D00000C9D79A /* SceneDelegate.swift in Sources */,
+				3D62BDA826FAF48F00F1A1A2 /* BaseFlutterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = flutter_boost_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +382,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "flutter_boost_ios/flutter_boost_ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -357,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = flutter_boost_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -365,6 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "flutter_boost_ios/flutter_boost_ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
