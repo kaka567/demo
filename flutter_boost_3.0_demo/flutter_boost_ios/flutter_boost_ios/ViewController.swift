@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .red
+        view.backgroundColor = .brown
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

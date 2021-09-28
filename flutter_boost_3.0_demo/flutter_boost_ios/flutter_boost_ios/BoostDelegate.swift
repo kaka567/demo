@@ -17,7 +17,7 @@ class BoostDelegate: NSObject, FlutterBoostDelegate {
         let isPresent = arguments["isPresent"] as? Bool ?? false
         let isAnimated = arguments["isAnimated"] as? Bool ?? true
         //这里根据pageName来判断生成哪个vc，这里给个默认的了
-        var targetViewController = UIViewController()
+        let targetViewController = UIViewController()
         
         if(isPresent){
             self.navigationController?.present(targetViewController, animated: isAnimated, completion: nil)
