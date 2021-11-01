@@ -12,7 +12,9 @@ class _SingleChildScrollViewDemoState extends State<SingleChildScrollViewDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(data),),
+      appBar: AppBar(
+        title: Text('data'),
+      ),
     );
   }
 }
