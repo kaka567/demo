@@ -387,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "flutter_boost_ios/flutter_boost_ios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -412,7 +412,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.study.flutter-boost-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "flutter_boost_ios/flutter_boost_ios-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
